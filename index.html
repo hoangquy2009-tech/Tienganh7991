@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      (function() {
+        try {
+          var target = typeof window !== 'undefined' ? window : (typeof globalThis !== 'undefined' ? globalThis : null);
+          if (!target) return;
+          var _fetch = target.fetch ? target.fetch.bind(target) : undefined;
+          var descriptor = {
+            get: function() {
+              return _fetch;
+            },
+            set: function(val) {
+              _fetch = val;
+            },
+            configurable: true,
+            enumerable: true
+          };
+          try {
+            Object.defineProperty(target, 'fetch', descriptor);
+          } catch (e) {}
+          try {
+            if (typeof Window !== 'undefined' && Window.prototype) {
+              Object.defineProperty(Window.prototype, 'fetch', descriptor);
+            }
+          } catch (e) {}
+        } catch (err) {
+          console.warn('Fetch setter shim error:', err);
+        }
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tạo đề thi theo môn Tiếng anh theo CV 7991</title>
+    <meta name="description" content="Hệ thống tạo đề thi môn Tiếng Anh chuẩn Công văn 7991/BGDĐT-GDTrH cho cấp Tiểu học, THCS và THPT với đầy đủ Đề thi, Ma trận, Bản đặc tả và File nghe." />
+    <meta property="og:title" content="Tạo đề thi theo môn Tiếng anh theo CV 7991" />
+    <meta property="og:description" content="Hệ thống tạo đề thi môn Tiếng Anh chuẩn Công văn 7991/BGDĐT-GDTrH cho cấp Tiểu học, THCS và THPT với đầy đủ Đề thi, Ma trận, Bản đặc tả và File nghe." />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lamejs/1.2.1/lame.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

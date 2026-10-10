@@ -1,0 +1,8 @@
+{
+  "name": "Tạo đề thi theo môn Tiếng anh theo CV 7991",
+  "description": "Hệ thống tạo đề thi môn Tiếng Anh chuẩn Công văn 7991/BGDĐT-GDTrH cho cấp Tiểu học, THCS và THPT với đầy đủ Đề thi, Ma trận, Bản đặc tả và File nghe.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
